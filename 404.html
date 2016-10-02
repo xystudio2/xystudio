@@ -1,0 +1,103 @@
+<html>
+<head>
+	<meta charset="GBK" />
+</head>
+<body onload="drawTree()">
+<canvas id="tree" width="300" height="300">请使用支持HTML5的浏览器浏览</canvas>
+<script type="text/javascript">
+var tree = document.getElementById("tree");
+var context = tree.getContext("2d");
+var image;
+
+(function()
+{
+    image = document.createElement("canvas");
+    image.width = 1;
+    image.height = 1;
+    var imageContext = image.getContext("2d");
+
+    imageContext.fillStyle = "#179900";
+    imageContext.fillRect(0, 0, image.width, image.height);
+    document.body.appendChild(image);
+})();
+
+function updateTree(fromIndex, toIndex)
+{
+var x=0,y=0,r,u=0;
+    for(var i=fromIndex; i <= toIndex; ++i)
+    {
+        r=Math.random() * 100;
+
+        if (r < 1)
+        {
+            x = 0;
+            y = .16 * y;
+        }
+        if (r>=1 && r<86)
+        {
+            u = .85 * x + .04 * y;
+            y = -.04*x + .85 * y + 1.6;
+            x = u;
+        }
+        if (r>=86 && r<97)
+        {
+            u = .2 * x - .26 * y;
+            y = .23 * x + .22 * y + 1.6;
+            x = u;
+        }
+        if (r>=97)
+        {
+            u = -.15 * x + .28 * y;
+            y = .26 * x + .24 * y +.44;
+            x = u;
+        }
+        context.drawImage(image,(60*x+320)/2.3+36,(640-60*y)/2.3);
+    }}
+
+var fromIndex = 0, toIndex = 2;
+context.fillStyle = "#000000";
+context.fillRect(0, 0, tree.width, tree.height);
+context.fillStyle = "#00CC33";
+context.fillText("隰桑有阿，其叶有难，", 10, 20);
+context.fillText("既见君子，其乐如何。", 10, 40);
+context.fillText("隰桑有阿，其叶有沃，", 10, 60);
+context.fillText("既见君子，云何不乐。", 10, 80);
+context.fillText("隰桑有阿，其叶有幽，", 10, 100);
+context.fillText("既见君子，德音孔胶。", 10, 120);
+context.fillText("心乎爱矣，遐不谓矣，", 10, 141);
+context.fillText("中心藏之，何日忘之。", 10, 160);
+
+context.globalAlpha = 0.4;
+context.globalCompositeOperation = "lighter";
+
+//五秒钟绘制完毕
+function drawTree()
+{
+    updateTree(fromIndex, toIndex);
+    fromIndex = toIndex;
+    toIndex += 500;
+    if(fromIndex < 500000)
+        requestAnimationFrame(drawTree);
+    else console.log("绘制完毕");
+    //for(var a=0;a<222;a++)
+    //{context.drawImage(image,a,a);
+   // }
+}
+
+</script>
+<title>平衍之域PlaneWorld - 404</title>
+<h1>4 0 4</h1>
+<h1>查无此页面，你要找的是不是下面的东西？</h1>
+			<li><a href="indexpw.htm">主页</a></li>
+			<li><a href="pwupdate.html">更新</a></li>
+                  <li><a href="pwactivity.html">活动</a></li>
+			<li><a href="pwabout.html">关于</a></li>
+        <br>
+        ? PlaneWorld 2015 - 2016
+        <br>
+        Original by 'Easy Graphics Engine' 2003 - 2016
+        <br>
+        site content under CC BY-SA 3.0 Unported.
+
+</body>
+</html>
