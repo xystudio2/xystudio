@@ -1,9 +1,9 @@
 <html>
 <head>
-	<meta charset="GBK" />
+	<meta charset="utf-8" />
 </head>
 <body onload="drawTree()">
-<canvas id="tree" width="300" height="300">ÇëÊ¹ÓÃÖ§³ÖHTML5µÄä¯ÀÀÆ÷ä¯ÀÀ</canvas>
+<canvas id="tree" width="300" height="300">è¯·ä½¿ç”¨æ”¯æŒHTML5çš„æµè§ˆå™¨æµè§ˆ</canvas>
 <script type="text/javascript">
 var tree = document.getElementById("tree");
 var context = tree.getContext("2d");
@@ -58,19 +58,19 @@ var fromIndex = 0, toIndex = 2;
 context.fillStyle = "#000000";
 context.fillRect(0, 0, tree.width, tree.height);
 context.fillStyle = "#00CC33";
-context.fillText("ÚôÉ£ÓĞ°¢£¬ÆäÒ¶ÓĞÄÑ£¬", 10, 20);
-context.fillText("¼È¼û¾ı×Ó£¬ÆäÀÖÈçºÎ¡£", 10, 40);
-context.fillText("ÚôÉ£ÓĞ°¢£¬ÆäÒ¶ÓĞÎÖ£¬", 10, 60);
-context.fillText("¼È¼û¾ı×Ó£¬ÔÆºÎ²»ÀÖ¡£", 10, 80);
-context.fillText("ÚôÉ£ÓĞ°¢£¬ÆäÒ¶ÓĞÓÄ£¬", 10, 100);
-context.fillText("¼È¼û¾ı×Ó£¬µÂÒô¿×½º¡£", 10, 120);
-context.fillText("ĞÄºõ°®ÒÓ£¬åÚ²»Î½ÒÓ£¬", 10, 141);
-context.fillText("ÖĞĞÄ²ØÖ®£¬ºÎÈÕÍüÖ®¡£", 10, 160);
+context.fillText("éš°æ¡‘æœ‰é˜¿ï¼Œå…¶å¶æœ‰éš¾ï¼Œ", 10, 20);
+context.fillText("æ—¢è§å›å­ï¼Œå…¶ä¹å¦‚ä½•ã€‚", 10, 40);
+context.fillText("éš°æ¡‘æœ‰é˜¿ï¼Œå…¶å¶æœ‰æ²ƒï¼Œ", 10, 60);
+context.fillText("æ—¢è§å›å­ï¼Œäº‘ä½•ä¸ä¹ã€‚", 10, 80);
+context.fillText("éš°æ¡‘æœ‰é˜¿ï¼Œå…¶å¶æœ‰å¹½ï¼Œ", 10, 100);
+context.fillText("æ—¢è§å›å­ï¼Œå¾·éŸ³å­”èƒ¶ã€‚", 10, 120);
+context.fillText("å¿ƒä¹çˆ±çŸ£ï¼Œéä¸è°“çŸ£ï¼Œ", 10, 141);
+context.fillText("ä¸­å¿ƒè—ä¹‹ï¼Œä½•æ—¥å¿˜ä¹‹ã€‚", 10, 160);
 
 context.globalAlpha = 0.4;
 context.globalCompositeOperation = "lighter";
 
-//ÎåÃëÖÓ»æÖÆÍê±Ï
+//äº”ç§’é’Ÿç»˜åˆ¶å®Œæ¯•
 function drawTree()
 {
     updateTree(fromIndex, toIndex);
@@ -78,21 +78,21 @@ function drawTree()
     toIndex += 500;
     if(fromIndex < 500000)
         requestAnimationFrame(drawTree);
-    else console.log("»æÖÆÍê±Ï");
+    else console.log("ç»˜åˆ¶å®Œæ¯•");
     //for(var a=0;a<222;a++)
     //{context.drawImage(image,a,a);
    // }
 }
 
 </script>
-<title>Æ½ÑÜÖ®ÓòPlaneWorld - 404</title>
+<title>å¹³è¡ä¹‹åŸŸPlaneWorld - 404</title>
 <h1>4 0 4</h1>
-<h1>²éÎŞ´ËÒ³Ãæ£¬ÄãÒªÕÒµÄÊÇ²»ÊÇÏÂÃæµÄ¶«Î÷£¿</h1>
-	<li><a href="http://xystudio.xege.org/">Ö÷Ò³</a></li>
-	<li><a href="pwupdate.html">¸üĞÂ</a></li>
+<h1>æŸ¥æ— æ­¤é¡µé¢ï¼Œä½ è¦æ‰¾çš„æ˜¯ä¸æ˜¯ä¸‹é¢çš„ä¸œè¥¿ï¼Ÿ</h1>
+	<li><a href="http://xystudio.xege.org/">ä¸»é¡µ</a></li>
+	<li><a href="pwupdate.html">æ›´æ–°</a></li>
 	<li><a href="PWMapWrite.html">Map Write</a></li>
-        <li><a href="pwactivity.html">»î¶¯</a></li>
-	<li><a href="pwabout.html">¹ØÓÚ</a></li>
+        <li><a href="pwactivity.html">æ´»åŠ¨</a></li>
+	<li><a href="pwabout.html">å…³äº</a></li>
         <br>
         ? PlaneWorld 2015 - 2016
         <br>
